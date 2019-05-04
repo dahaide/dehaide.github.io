@@ -11,39 +11,14 @@
 <body>
   <p>hello world!</p>
   <button onclick="crose()">test</button>
-  <!-- <div class="t-computer"> -->
-    <!-- <div class="t-line">
-      <span class="t-piece"></span>
-    </div> -->
-    <!-- <input type="text" id="val1" name="">
-    <input type="text" id="val2" name="">
-    <div>
-      <button>+</button>
-      <button>-</button>
-      <button>*</button>
-      <button>/</button>
-    </div>
-    <div><span>½á¹û: </span><span id="result"></span></div> -->
-  <!-- </div> -->
   <div id="msg"></div>
   <script type="text/javascript">
-    // let ws1 = new WebSocket('ws://127.0.0.1:12345/server.php')
     Object.defineProperty(this, 'msg', {
       configurable: true,
       enumerable: true,
       get: _ => document.querySelector('#msg').innerHTML,
       set: val => document.querySelector('#msg').innerHTML = val
     })
-    // ws1.addEventListener('message', evn => {
-    //   console.log(evn.data)
-    // })
-    // {
-    //   ['open', 'message', 'error', 'close'].forEach(item => {
-    //     ws1.addEventListener(item, evn => this.msg = item)
-    //   })
-    // }
-
-    // XMLHttpRequest
     function crose() {
       try {
         let $http = new XMLHttpRequest()
